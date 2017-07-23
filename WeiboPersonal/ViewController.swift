@@ -128,6 +128,7 @@ extension ViewController: TabScrollViewDelegate,ContentVCScrollDelegate,UIScroll
             } else {
                 let positionY = contentVC.listTableView.contentOffset.y
                 if positionY < height {
+                    //当某个tableview向上滑动露出headerview后，把所有的tableview滑动到顶部
                     contentVC.listTableView.contentOffset = CGPoint(x: 0, y: height)
                 }
             }
